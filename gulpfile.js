@@ -24,6 +24,7 @@ gulp.task('style', function() {
             'node_modules/slick-carousel/slick/slick.css',
             'node_modules/magnific-popup/dist/magnific-popup.css'
 
+
         ])
         .pipe(concat('libs.min.css'))
         .pipe(cssmin())
