@@ -368,13 +368,32 @@
 //products start
 //products end
 .product {
+    &-item__wrapper {
+        position: relative;
+        width: 271px;
+    }
     &-item {
         border: 1px solid #CDCDCD;
         border-radius: 3px;
-        position: relative;
         text-align: center;
         padding: 52px 20px 31px;
-        width: 271px;
+        &:hover {
+            box-shadow: 3px 3px 20px rgba(50, 50, 50, 0.25);
+            color: #1C62CD;
+        }
+        &--sale::before {
+            content: 'SALE';
+            padding: 8px 15px;
+            background-color: #1C62CD;
+            position: absolute;
+            color: #fff;
+            left: 0;
+            top: 0;
+            text-transform: uppercase;
+            font-size: 12px;
+            line-height: 14px;
+            letter-spacing: 0.07em;
+        }
         &__title {
             font-weight: normal;
             padding: 14px 1px 25px;
@@ -387,14 +406,61 @@
             height: 22px;
             background-color: transparent;
             border: none;
+            outline: none;
+            z-index: 5;
             &::before {
                 content: '';
                 position: absolute;
                 width: 24px;
                 height: 22px;
-                background-color: red;
                 top: 0;
-                left: 0;
+                left: 14px;
+                outline: none;
+                background-image: url('../images/favorit.svg');
+            }
+            &--active::before {
+                background-image: url('../images/favorit-active.svg');
+            }
+        }
+        &__basket {
+            position: absolute;
+            width: 60px;
+            height: 40px;
+            background-color: #fff;
+            background: #1C62CD;
+            border-radius: 10px 0 0 0;
+            bottom: 0;
+            right: 0;
+            border: none;
+            padding-top: 7px;
+            cursor: pointer;
+            &::before {
+                content: '';
+                position: absolute;
+                background-image: url(../images/basket-white.svg);
+                width: 30px;
+                height: 23px;
+                background-repeat: no-repeat;
+            }
+        }
+        &__price {
+            font-weight: bold;
+            font-size: 30px;
+            line-height: 36px;
+        }
+        &__hover-text {
+            padding: 18px 21px;
+            background-color: rgba(255, 255, 255, .9);
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+            border-radius: 3px;
+            display: inline-block;
+            position: absolute;
+            top: 30%;
+            color: #2F3035;
+            opacity: 0;
+            transition: all .3s;
+            &:hover {
+                opacity: 1;
             }
         }
     }
