@@ -23,4 +23,6 @@ $(function() {
 
     });
 
+    $('.product-slaider').slick({});
+
 });
