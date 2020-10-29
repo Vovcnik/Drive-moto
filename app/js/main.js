@@ -23,6 +23,11 @@ $(function() {
 
     });
 
-    $('.product-slaider').slick({});
+    $('.product-slaider').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        prevArrow: '<button class="product-slaider__slider-btn product-slaider__slider-btnnext"><img src="images/content/arrow-black-rights.svg" alt=""></button>',
+        nextArrow: '<button class="product-slaider__slider-btn product-slaider__slider-btnprev"><img src="images/content/arrow-black-left.svg" alt=""></button>'
+    });
 
 });
