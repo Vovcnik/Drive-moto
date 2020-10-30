@@ -9,8 +9,8 @@ $(function() {
     $('.tab').on('click', function(e) {
         e.preventDefault();
 
-        $('.tab').removeClass('tab--active');
-        $('.tabs-content').removeClass('tabs-content--active');
+        $($(this).siblings()).removeClass('tab--active');
+        $($(this).parent().siblings().find('div')).removeClass('tabs-content--active');
 
 
 
@@ -19,7 +19,7 @@ $(function() {
 
     });
     $('.product-item__favorite').on('click', function() {
-        $('.product-item__favorite').toggleClass('product-item__favorite--active')
+        $(this).toggleClass('product-item__favorite--active')
 
     });
 
