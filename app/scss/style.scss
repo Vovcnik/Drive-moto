@@ -372,7 +372,7 @@
 }
 
 // catigories end
-//products start
+//product start
 .product {
     &-item__wrapper {
         position: relative;
@@ -384,7 +384,10 @@
         text-align: center;
         padding: 52px 20px 31px;
         min-height: 403px;
-        min-width: 271px;
+        max-width: 271px;
+        &__img {
+            max-width: 100%;
+        }
         &:hover {
             box-shadow: 3px 3px 20px rgba(50, 50, 50, 0.25);
             color: #1C62CD;
@@ -583,3 +586,168 @@
 }
 
 // banner end
+// footer start
+.footer {
+    background: #F0F0F4;
+    &__bottom {
+        padding: 46px 0 22px;
+        display: flex;
+        justify-content: center;
+        &-link {
+            font-size: 10px;
+            line-height: 12px;
+            color: #48494D;
+            margin: 0 80px;
+        }
+    }
+    &__top {
+        padding-top: 43px;
+        &-inner {
+            display: flex;
+            justify-content: space-between;
+        }
+        &-newslatter,
+        &__top-item {
+            width: 295px;
+            margin-right: 80px;
+        }
+        &-title {
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 17px;
+        }
+    }
+    &-form {
+        margin-top: 34px;
+        display: flex;
+        justify-content: space-between;
+        &__input {
+            background-color: #fff;
+            border: none;
+            font-size: 14px;
+            line-height: 17px;
+            outline: none;
+            padding: 0 12px;
+            &::placeholder {
+                color: #C4C4C4;
+            }
+        }
+        &__btn {
+            text-transform: uppercase;
+            padding: 10px 16px;
+            border: none;
+            background-color: #1C62CD;
+            color: #fff;
+            @include f600;
+            font-size: 11px;
+            line-height: 13px;
+            letter-spacing: 0.12em;
+        }
+    }
+    &-list {
+        font-size: 14px;
+        line-height: 24px;
+    }
+    &__top-item {
+        width: 200px;
+    }
+    &__top-social,
+    &__top-item {
+        width: 250px;
+    }
+}
+
+.social-list {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    &__item+&__item {
+        margin-left: 30px;
+    }
+}
+
+// footer end
+// breadcrumbs start
+.breadcrumbs {
+    margin-bottom: 40px;
+    &__list-item {
+        display: inline-block;
+        margin-right: 10px;
+        padding-right: 16px;
+        position: relative;
+        font-size: 15px;
+        line-height: 18px;
+        color: #C4C4C4;
+        &::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            background-image: url('../images/arrow-link.svg');
+            width: 6px;
+            height: 9px;
+            bottom: 5px;
+        }
+        &:last-child::after {
+            display: none;
+        }
+    }
+}
+
+// breadcrumbs end
+// catalog start
+.catalog {
+    margin-bottom: 100px;
+    &__title {
+        font-size: 30px;
+        line-height: 36px;
+        @include f600;
+        margin-bottom: 26px;
+    }
+    &__filter {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 50px;
+        &-items button {
+            font-size: 14px;
+            line-height: 17px;
+            opacity: 0.7;
+            background: #F0F0F4;
+            border-radius: 3px;
+            border: none;
+            padding: 5px 22px;
+            outline: none;
+            cursor: pointer;
+            &+button {
+                margin-left: 8px;
+            }
+        }
+        &-btn button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            outline: none;
+            margin: 0;
+            padding: 0;
+            &+button {
+                margin-left: 10px;
+            }
+        }
+    }
+    &__inner {
+        display: flex;
+        &-aside {
+            min-width: 290px;
+            margin-right: 10px;
+        }
+        &-list {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            & .product-item__wrapper {
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+// catalog end
