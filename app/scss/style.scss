@@ -700,7 +700,7 @@
     &__title {
         font-size: 30px;
         line-height: 36px;
-        @include f600;
+        @include f700;
         margin-bottom: 26px;
     }
     &__filter {
@@ -751,3 +751,81 @@
 }
 
 // catalog end
+//paginatia start
+.pagination {
+    width: 100%;
+    margin-top: 70px;
+    &-list {
+        display: flex;
+        justify-content: center;
+        &__item {
+            padding: 6px 12px;
+            border: 2px solid transparent;
+            color: #C4C4C4;
+            font-size: 18px;
+            line-height: 22px;
+            margin: 0 4px;
+            &.active {
+                padding: 9px 15px;
+                border: 2px solid #1C62CD;
+                color: #1C62CD;
+                a {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+//paginatia end
+// filters tabs start
+.aside-filter {
+    &__tabs {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__tab {
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
+        @include f400;
+        color: #C4C4C4;
+        width: 50%;
+        &.tab--active {
+            color: #2F3035;
+            outline: none;
+            @include f700;
+            span {
+                display: inline-block;
+                border-bottom: 2px solid #1C62CD;
+                padding-bottom: 7px;
+            }
+        }
+    }
+}
+
+// filters tabs end
+//aside filter start
+.aside-filter__item-drop {
+    margin: 40px 0;
+}
+
+.aside-filter__item-title {
+    font-size: 16px;
+    line-height: 19px;
+    padding-left: 26px;
+    @include f600;
+}
+
+.filter__item-drop {
+    margin-bottom: 20px;
+    position: relative;
+    &::before {
+        position: absolute;
+        content: "";
+        background-image: url('../images/arrow-dow.svg');
+    }
+}
+
+//aside filter end

@@ -30,4 +30,8 @@ $(function() {
         nextArrow: '<button class="product-slaider__slider-btn product-slaider__slider-btnprev"><img src="images/content/arrow-black-left.svg" alt=""></button>'
     });
 
+
+
+    $('filter-style').styler();
+
 });
