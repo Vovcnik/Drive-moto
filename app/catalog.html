@@ -123,31 +123,31 @@
                 </div>
                 <div class="catalog__filter-btn">
                     <select class="filter-style">
-                        <option value=""></option>
-                        <option value=""></option>
-                        <option value=""></option>
-                    </select>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+            </select>
                     <button class="catalog__filter-btngid">
-                        <svg width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="1" y="1" width="21" height="19" stroke="#2F3035" stroke-width="2"/>
-                            <rect x="7" y="6" width="2" height="2" fill="#2F3035" stroke="#2F3035" stroke-width="2"/>
-                            <rect x="7" y="13" width="2" height="2" fill="#2F3035" stroke="#2F3035" stroke-width="2"/>
-                            <rect x="14" y="6" width="2" height="2" fill="#2F3035" stroke="#2F3035" stroke-width="2"/>
-                            <rect x="14" y="13" width="2" height="2" fill="#2F3035" stroke="#2F3035" stroke-width="2"/>
-                            </svg>
-                        </button>
+                <svg width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="1" y="1" width="21" height="19" stroke="#2F3035" stroke-width="2"/>
+                    <rect x="7" y="6" width="2" height="2" fill="#2F3035" stroke="#2F3035" stroke-width="2"/>
+                    <rect x="7" y="13" width="2" height="2" fill="#2F3035" stroke="#2F3035" stroke-width="2"/>
+                    <rect x="14" y="6" width="2" height="2" fill="#2F3035" stroke="#2F3035" stroke-width="2"/>
+                    <rect x="14" y="13" width="2" height="2" fill="#2F3035" stroke="#2F3035" stroke-width="2"/>
+                    </svg>
+                </button>
                     <button class="catalog__filter-btnline">
-                        <svg width="25" height="19" viewBox="0 0 25 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g opacity="0.3">
-                            <rect x="6" width="19" height="3" rx="1.5" fill="#2F3035"/>
-                            <rect x="6" y="8" width="19" height="3" rx="1.5" fill="#2F3035"/>
-                            <rect x="6" y="16" width="19" height="3" rx="1.5" fill="#2F3035"/>
-                            <rect width="3" height="3" rx="1.5" fill="#2F3035"/>
-                            <rect y="8" width="3" height="3" rx="1.5" fill="#2F3035"/>
-                            <rect y="16" width="3" height="3" rx="1.5" fill="#2F3035"/>
-                            </g>
-                            </svg>
-                       </button>
+                <svg width="25" height="19" viewBox="0 0 25 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g opacity="0.3">
+                    <rect x="6" width="19" height="3" rx="1.5" fill="#2F3035"/>
+                    <rect x="6" y="8" width="19" height="3" rx="1.5" fill="#2F3035"/>
+                    <rect x="6" y="16" width="19" height="3" rx="1.5" fill="#2F3035"/>
+                    <rect width="3" height="3" rx="1.5" fill="#2F3035"/>
+                    <rect y="8" width="3" height="3" rx="1.5" fill="#2F3035"/>
+                    <rect y="16" width="3" height="3" rx="1.5" fill="#2F3035"/>
+                    </g>
+                    </svg>
+                </button>
                 </div>
             </div>
             <div class="catalog__inner">
@@ -165,22 +165,55 @@
                                             <p class="aside-filter__item-title filter__item-drop">Наличие</p>
                                             <div class="aside-filter__content">
                                                 <div class="aside-filter__content-box">
-                                                    <label>
-                                                         <input class="filter-style" type="checkbox">
-                                                        В наличие
-                                                    </label>
+                                                    <label class="aside-filter__content-label">
+                                                    <input class="filter-style" type="checkbox">
+                                                В наличие
+                                            </label>
                                                 </div>
+
                                                 <div class="aside-filter__content-box">
 
-                                                    <label>
- <input class="filter-style" type="checkbox">
-                                                        Под заказ
-                                                    </label>
+                                                    <label class="aside-filter__content-label">
+                                    <input class="filter-style" type="checkbox">
+                                                Под заказ
+                                            </label>
                                                 </div>
                                             </div>
                                         </li>
-                                        <li class="aside-filter__item-drop"></li>
-                                        <li class="aside-filter__item-drop"></li>
+                                        <li class="aside-filter__item-drop">
+                                            <p class="aside-filter__item-title filter__item-drop">новинки</p>
+
+                                            <div class="aside-filter__content aside-filter__content-radio">
+                                                <div class="aside-filter__content-box">
+                                                    <label class="aside-filter__content-label">
+                                                    <input class="filter-style" name="radio"  type="radio">
+                                                Все
+                                            </label>
+                                                </div>
+                                                <div class="aside-filter__content-box">
+                                                    <label class="aside-filter__content-label">
+                                    <input class="filter-style" name="radio"  type="radio">
+                                               Новинки
+                                            </label>
+
+                                                </div>
+                                                <div class="aside-filter__content-box">
+                                                    <label class="aside-filter__content-label">
+                                    <input class="filter-style" name="radio"  type="radio">
+                                               Акциии
+                                            </label>
+
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="aside-filter__item-drop">
+                                            <p class="aside-filter__item-title filter__item-drop">Цена</p>
+                                            <div class="aside-filter__content">
+                                                <input type="text" class="js-range-slider" name="my_range" value="" data-type="double" data-min="100000" data-max="500000" data-from="20000" data-to="275000" data-grid="true" />
+
+
+                                            </div>
+                                        </li>
                                         <li class="aside-filter__item-list"></li>
 
                                     </ul>
@@ -195,8 +228,8 @@
                     <div class="product-item__wrapper">
                         <button class="product-item__favorite"></button>
                         <button class="product-item__basket">
-                            <img src="images/basket-white.svg" alt="">
-                        </button>
+                    <img src="images/basket-white.svg" alt="">
+                </button>
                         <a class="product-item__notify-link" href="#"><span>Сообщить о поступлении</span></a>
                         <a class="product-item product-item--sale" href="#">
                             <p class="product-item__hover-text">
@@ -212,8 +245,8 @@
                     <div class="product-item__wrapper">
                         <button class="product-item__favorite"></button>
                         <button class="product-item__basket">
-                            <img src="images/basket-white.svg" alt="">
-                        </button>
+                    <img src="images/basket-white.svg" alt="">
+                </button>
                         <a class="product-item__notify-link" href="#"><span>Сообщить о поступлении</span></a>
                         <a class="product-item" href="#">
                             <p class="product-item__hover-text">
@@ -229,8 +262,8 @@
                     <div class="product-item__wrapper">
                         <button class="product-item__favorite"></button>
                         <button class="product-item__basket">
-                            <img src="images/basket-white.svg" alt="">
-                        </button>
+                    <img src="images/basket-white.svg" alt="">
+                </button>
                         <a class="product-item__notify-link" href="#"><span>Сообщить о поступлении</span></a>
                         <a class="product-item product-item--sale" href="#">
                             <p class="product-item__hover-text">
@@ -246,8 +279,8 @@
                     <div class="product-item__wrapper">
                         <button class="product-item__favorite"></button>
                         <button class="product-item__basket">
-                            <img src="images/basket-white.svg" alt="">
-                        </button>
+                    <img src="images/basket-white.svg" alt="">
+                </button>
                         <a class="product-item__notify-link" href="#"><span>Сообщить о поступлении</span></a>
                         <a class="product-item" href="#">
                             <p class="product-item__hover-text">
@@ -263,8 +296,8 @@
                     <div class="product-item__wrapper">
                         <button class="product-item__favorite"></button>
                         <button class="product-item__basket">
-                            <img src="images/basket-white.svg" alt="">
-                        </button>
+                    <img src="images/basket-white.svg" alt="">
+                </button>
                         <a class="product-item__notify-link" href="#"><span>Сообщить о поступлении</span></a>
                         <a class="product-item product-item--sale" href="#">
                             <p class="product-item__hover-text">
@@ -280,8 +313,8 @@
                     <div class="product-item__wrapper">
                         <button class="product-item__favorite"></button>
                         <button class="product-item__basket">
-                            <img src="images/basket-white.svg" alt="">
-                        </button>
+                    <img src="images/basket-white.svg" alt="">
+                </button>
                         <a class="product-item__notify-link" href="#"><span>Сообщить о поступлении</span></a>
                         <a class="product-item" href="#">
                             <p class="product-item__hover-text">
@@ -297,8 +330,8 @@
                     <div class="product-item__wrapper product-item__not-available">
                         <button class="product-item__favorite"></button>
                         <button class="product-item__basket">
-                            <img src="images/basket-white.svg" alt="">
-                        </button>
+                    <img src="images/basket-white.svg" alt="">
+                </button>
                         <a class="product-item__notify-link" href="#"><span>Сообщить о поступлении</span></a>
                         <a class="product-item product-item--sale" href="#">
                             <p class="product-item__hover-text">
@@ -314,8 +347,8 @@
                     <div class="product-item__wrapper">
                         <button class="product-item__favorite"></button>
                         <button class="product-item__basket">
-                            <img src="images/basket-white.svg" alt="">
-                        </button>
+                    <img src="images/basket-white.svg" alt="">
+                </button>
                         <a class="product-item__notify-link" href="#"><span>Сообщить о поступлении</span></a>
                         <a class="product-item" href="#">
                             <p class="product-item__hover-text">
@@ -331,8 +364,8 @@
                     <div class="product-item__wrapper">
                         <button class="product-item__favorite"></button>
                         <button class="product-item__basket">
-                            <img src="images/basket-white.svg" alt="">
-                        </button>
+                    <img src="images/basket-white.svg" alt="">
+                </button>
                         <a class="product-item__notify-link" href="#"><span>Сообщить о поступлении</span></a>
                         <a class="product-item product-item--sale" href="#">
                             <p class="product-item__hover-text">
@@ -348,8 +381,8 @@
                     <div class="product-item__wrapper">
                         <button class="product-item__favorite"></button>
                         <button class="product-item__basket">
-                            <img src="images/basket-white.svg" alt="">
-                        </button>
+                    <img src="images/basket-white.svg" alt="">
+                </button>
                         <a class="product-item__notify-link" href="#"><span>Сообщить о поступлении</span></a>
                         <a class="product-item" href="#">
                             <p class="product-item__hover-text">
@@ -365,8 +398,8 @@
                     <div class="product-item__wrapper">
                         <button class="product-item__favorite"></button>
                         <button class="product-item__basket">
-                            <img src="images/basket-white.svg" alt="">
-                        </button>
+                    <img src="images/basket-white.svg" alt="">
+                </button>
                         <a class="product-item__notify-link" href="#"><span>Сообщить о поступлении</span></a>
                         <a class="product-item product-item--sale" href="#">
                             <p class="product-item__hover-text">
@@ -383,8 +416,8 @@
                     <div class="product-item__wrapper product-item__not-available">
                         <button class="product-item__favorite"></button>
                         <button class="product-item__basket">
-                            <img src="images/basket-white.svg" alt="">
-                        </button>
+                    <img src="images/basket-white.svg" alt="">
+                </button>
                         <a class="product-item__notify-link" href="#"><span>Сообщить о поступлении</span></a>
                         <a class="product-item" href="#">
                             <p class="product-item__hover-text">
@@ -445,8 +478,8 @@
                         <ul class="footer-list">
                             <li class="footer-list__item">
                                 <a href="#">
-                                    О компании
-                                      </a>
+                            О компании
+                                </a>
                             </li>
                             <li class="footer-list__item">
                                 <a href="#"> Акции</a>
@@ -466,20 +499,20 @@
                         <ul class="footer-list">
                             <li class="footer-list__item">
                                 <a href="#">
-                                    Доставка и самовывоз
-                                      </a>
+                            Доставка и самовывоз
+                                </a>
                             </li>
                             <li class="footer-list__item">
                                 <a href="#"> Оплата
-                                </a>
+                        </a>
                             </li>
                             <li class="footer-list__item">
                                 <a href="#"> Возврат-обмен
-                                </a>
+                        </a>
                             </li>
                             <li class="footer-list__item">
                                 <a href="#"> Новости
-                                </a>
+                        </a>
                             </li>
                         </ul>
                     </div>
@@ -526,10 +559,10 @@
 
 </html>
 <!-- <div class="tabs-wrapper">
-    <div class="tabs">
-        <a class="tab tab--active" href="#"></a>
-    </div>
-    <div class="tabs-container">
-        <div class="tabs-content"></div>
-    </div>
+<div class="tabs">
+<a class="tab tab--active" href="#"></a>
+</div>
+<div class="tabs-container">
+<div class="tabs-content"></div>
+</div>
 </div> -->

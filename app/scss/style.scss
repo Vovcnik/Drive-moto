@@ -811,25 +811,193 @@ button:-moz-focusring {
 
 // filters tabs end
 //aside filter start
-.aside-filter__item-drop {
-    margin: 40px 0;
-}
-
-.aside-filter__item-title {
-    font-size: 16px;
-    line-height: 19px;
-    padding-left: 26px;
-    @include f600;
+.aside-filter {
+    &__item-drop {
+        margin: 40px 0;
+    }
+    &__item-title {
+        font-size: 16px;
+        line-height: 19px;
+        padding-left: 26px;
+        @include f600;
+    }
 }
 
 .filter__item-drop {
-    margin-bottom: 20px;
+    // margin-bottom: 20px;
     position: relative;
+    cursor: pointer;
     &::before {
         position: absolute;
         content: "";
         background-image: url('../images/arrow-dow.svg');
+        left: 0;
+        bottom: 5px;
+        width: 12px;
+        height: 8px;
+        transform: rotate(0deg);
+        transition: all .2s;
     }
+    &--active::before {
+        transform: rotate(180deg);
+    }
+}
+
+.aside-filter {
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 20px;
+        &.aside-filter__content-radio {
+            flex-wrap: nowrap;
+        }
+        &-box {
+            width: 50%;
+        }
+    }
+    &__content-label {
+        font-size: 14px;
+        line-height: 17px;
+        cursor: pointer;
+    }
+}
+
+.jq-checkbox,
+.jq-radio {
+    background: #fff;
+    width: 14px;
+    height: 14px;
+    border-radius: 1px;
+    border: 1px solid #C4C4C4;
+    box-shadow: none;
+    vertical-align: -2px;
+    margin: 0 8px 0 0;
+}
+
+.jq-checkbox.checked,
+.jq-radio.checked {
+    background: #1C62CD;
+    border: none;
+}
+
+.jq-checkbox.checked .jq-checkbox__div {
+    width: 8px;
+    height: 6px;
+    margin: 4px 0 0 3px;
+    border-bottom: none;
+    border-left: none;
+    transform: rotate(0);
+    background-image: url('../images/checked-icon.svg');
+}
+
+.jq-radio.checked .jq-radio__div {
+    width: 0px;
+    height: 0px;
+    margin: 0x;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+}
+
+.irs--flat {
+    margin-top: -15px;
+    width: 90%;
+}
+
+.irs--flat .irs-from,
+.irs--flat .irs-single,
+.irs--flat .irs-to {
+    display: block;
+}
+
+.irs--flat .irs-from::before,
+.irs--flat .irs-single::before,
+.irs--flat .irs-to::before {
+    transform: rotate(180deg);
+    bottom: 14px;
+    border-top-color: #1C62CD;
+}
+
+.irs--flat .irs-from,
+.irs--flat .irs-single,
+.irs--flat .irs-to {
+    background-color: #1C62CD;
+}
+
+.irs-with-grid .irs-grid {
+    display: none;
+}
+
+.irs-from,
+.irs-single,
+.irs-to {
+    top: 40px;
+    left: 0;
+    white-space: nowrap;
+}
+
+.irs--flat .irs-min,
+.irs--flat .irs-max {
+    top: 70px;
+    padding: 0x;
+    font-size: 14px;
+    line-height: 17px;
+    text-decoration-line: underline;
+    color: #2F3035;
+    text-shadow: none;
+    background-color: transparent;
+    @include f400;
+    border-radius: 0px;
+    visibility: visible !important;
+    padding-left: 27px;
+}
+
+.irs-min::before,
+.irs-max::before {
+    font-size: 14px;
+    position: absolute;
+    line-height: 17px;
+    color: #C4C4C4;
+    text-decoration: none;
+    left: 0;
+}
+
+.irs-min::before {
+    content: 'от';
+}
+
+.irs-max::before {
+    content: 'до';
+}
+
+.irs--flat .irs-line {
+    top: 25px;
+    height: 1px;
+    background-color: #E0E0E0;
+    border-radius: 0px;
+}
+
+.irs--flat .irs-bar {
+    top: 25px;
+    height: 3px;
+    background-color: #1C62CD;
+}
+
+.irs--flat .irs-handle {
+    top: 22px;
+    width: 8px;
+    height: 8px;
+    background-color: #1C62CD;
+    border-radius: 50%;
+}
+
+.irs--flat .irs-handle>i:first-child {
+    background-color: transparent;
+}
+
+.irs--flat .irs-handle.state_hover>i:first-child,
+.irs--flat .irs-handle:hover>i:first-child {
+    background-color: transparent;
 }
 
 //aside filter end
