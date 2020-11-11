@@ -900,7 +900,8 @@
     
     .irs--flat {
         margin-top: -15px;
-        width: 90%;
+        width: 85%;
+        margin-left: 22px;
     }
     
     .irs--flat .irs-from,
@@ -948,7 +949,7 @@
         @include f400;
         border-radius: 0px;
         visibility: visible !important;
-        padding-left: 27px;
+        padding-left: 10px;
     }
     
     .irs-min::before,
@@ -958,7 +959,7 @@
         line-height: 17px;
         color: #C4C4C4;
         text-decoration: none;
-        left: 0;
+        left: -20px;
     }
     
     .irs-min::before {
@@ -1022,6 +1023,7 @@
         font-size: 14px;
         line-height: 17px;
         color: #48494D;
+        text-align: center;
     }
     
     .jq-selectbox__select {
@@ -1119,9 +1121,56 @@
         height: 30px;
         line-height: 14px;
         margin-bottom: 20px;
+        margin-top: 10px;
         &::placeholder {
             color: #BDBEC2;
         }
+    }
+    
+    .dtn-checked {
+        .aside-filter__content {
+            flex-wrap: nowrap;
+            justify-content: space-between;
+        }
+        .aside-filter__content-box {
+            width: auto;
+        }
+        .aside-filter__content-label {
+            position: relative;
+            // background: #F0F0F4;
+            height: 25px;
+            width: 63px;
+            font-size: 12px;
+            line-height: 14px;
+            letter-spacing: 0.07em;
+            color: #C4C4C4;
+        }
+        .jq-checkbox,
+        .jq-radio {
+            height: 25px;
+            width: 63px;
+            background: #F0F0F4;
+            border: none;
+            &.checked {
+                background: #1C62CD;
+                color: #FFFFFF;
+                ~.dtn-checked-text {
+                    color: #FFFFFF;
+                }
+                .jq-checkbox__div {
+                    display: none;
+                }
+            }
+        }
+    }
+    
+    .dtn-checked-text {
+        position: absolute;
+        top: -6px;
+        left: 48%;
+        z-index: 5;
+        transform: translateX(-57%);
+        @include f700;
     }
     
     //aside filter end
